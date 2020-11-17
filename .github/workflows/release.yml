@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
   repository_dispatch:
 
+env:
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+
 jobs:
   build_linux:
     runs-on: ubuntu-16.04
