@@ -51,19 +51,6 @@ jobs:
 
     - name: do build
       run: cd src;./release_macos.sh
-    
-    - uses: actions/setup-python@v2
-      with:
-        python-version: '3.8'
-    - name: Upload
-      run: |
-        pip install -r requirements.txt
-        python upload.py
-      env: 
-        filename: 'macos.zip'
-        nutstore_url: ${{ secrets.NUTSTORE_URL }}
-        nutstore_username: ${{ secrets.NUTSTORE_USERNAME }}
-        nutstore_password: ${{ secrets.NUTSTORE_PASSWORD }}
 
   build_windows:
     runs-on: windows-latest
